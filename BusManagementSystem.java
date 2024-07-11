@@ -17,17 +17,15 @@ class Bus implements Manageable {
     public Bus(Scanner sc) {
         this.sc = sc;
     }
-
     public Bus(int id, String name, int cap) {
         busID = id;
         busName = name;
         capacity = cap;
     }
-
     public void add() {
         System.out.print("Enter Bus ID: ");
         int id = sc.nextInt();
-        sc.nextLine();  // Consume newline
+        sc.nextLine();  
         System.out.print("Enter Bus Name: ");
         String name = sc.nextLine();
         System.out.print("Enter Bus Capacity: ");
@@ -37,13 +35,11 @@ class Bus implements Manageable {
         busList.add(bus);
         System.out.println("Bus added successfully!");
         
-        // Debug print statement
         System.out.println("Current bus list:");
         for (Bus b : busList) {
             System.out.println(b.busID + ", " + b.busName + ", " + b.capacity);
         }
     }
-
     public void display() {
         if (busList.isEmpty()) {
             System.out.println("No buses to display.");
@@ -55,7 +51,6 @@ class Bus implements Manageable {
         }
     }
 }
-
 class Driver implements Manageable {
     int driverID;
     String driverName;
@@ -67,17 +62,15 @@ class Driver implements Manageable {
     public Driver(Scanner sc) {
         this.sc = sc;
     }
-
     public Driver(int id, String name, int exp) {
         driverID = id;
         driverName = name;
         experience = exp;
     }
-
     public void add() {
         System.out.print("Enter Driver ID: ");
         int id = sc.nextInt();
-        sc.nextLine();  // Consume newline
+        sc.nextLine();  
         System.out.print("Enter Driver Name: ");
         String name = sc.nextLine();
         System.out.print("Enter Experience (years): ");
@@ -87,13 +80,11 @@ class Driver implements Manageable {
         driverList.add(driver);
         System.out.println("Driver added successfully!");
         
-        // Debug print statement
         System.out.println("Current driver list:");
         for (Driver d : driverList) {
             System.out.println(d.driverID + ", " + d.driverName + ", " + d.experience);
         }
     }
-
     public void display() {
         if (driverList.isEmpty()) {
             System.out.println("No drivers to display.");
@@ -105,7 +96,6 @@ class Driver implements Manageable {
         }
     }
 }
-
 class Route implements Manageable {
     int routeID;
     String startPoint;
@@ -117,17 +107,15 @@ class Route implements Manageable {
     public Route(Scanner sc) {
         this.sc = sc;
     }
-
     public Route(int id, String start, String end) {
         routeID = id;
         startPoint = start;
         endPoint = end;
     }
-
     public void add() {
         System.out.print("Enter Route ID: ");
         int id = sc.nextInt();
-        sc.nextLine();  // Consume newline
+        sc.nextLine();  
         System.out.print("Enter Start Point: ");
         String start = sc.nextLine();
         System.out.print("Enter End Point: ");
@@ -137,13 +125,11 @@ class Route implements Manageable {
         routeList.add(route);
         System.out.println("Route added successfully!");
         
-        // Debug print statement
         System.out.println("Current route list:");
         for (Route r : routeList) {
             System.out.println(r.routeID + ", " + r.startPoint + ", " + r.endPoint);
         }
     }
-
     public void display() {
         if (routeList.isEmpty()) {
             System.out.println("No routes to display.");
@@ -155,7 +141,6 @@ class Route implements Manageable {
         }
     }
 }
-
 public class BusManagementSystem {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
